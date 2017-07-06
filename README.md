@@ -2,6 +2,8 @@
 
 Flags use of callback functions and .then(), for users of ES2017's async/await
 
+[![CircleCI](https://circleci.com/gh/mikemaccana/eslint-must-use-await.svg?style=svg)](https://circleci.com/gh/mikemaccana/eslint-must-use-await)
+
 ## Installation
 
 You'll first need to install [ESLint](http://eslint.org):
