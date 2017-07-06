@@ -36,14 +36,14 @@ Then configure the rules you want to use under the rules section.
 ```json
 {
     "rules": {
-        "must-use-await/rule-name": 2
+        "must-use-await/must-use-await": 1, // 1 warn, 2 error
     }
 }
 ```
 
 ## Supported Rules
 
-* Fill in provided rules here
+* must-use-await - will warn on use of callback, cb, done or .then()
 
 
 
