@@ -1,6 +1,6 @@
 {
   "name": "eslint-plugin-must-use-await",
-  "version": "1.0.1",
+  "version": "1.0.2",
   "description": "Flags use of callback functions and .then(), for users of ES2017's async/await",
   "keywords": [
     "eslint",

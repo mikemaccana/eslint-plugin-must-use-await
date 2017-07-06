@@ -33,10 +33,12 @@ Add `must-use-await` to the plugins section of your `.eslintrc` configuration fi
 
 Then configure the rules you want to use under the rules section.
 
+Magic numbers: `1` is warn, `2` is error.
+
 ```json
 {
     "rules": {
-        "must-use-await/must-use-await": 1, // 1 warn, 2 error
+        "must-use-await/must-use-await": 1,
     }
 }
 ```
