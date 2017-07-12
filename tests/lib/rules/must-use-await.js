@@ -27,6 +27,10 @@ ruleTester.run('must-use-await', rule, {
 		{
 			code: `foo.then(function(){})`,
 			errors: [IDENTIFIER_ERROR]
+		},
+		{
+			code: `doThing(function(err){})`,
+			errors: [IDENTIFIER_ERROR]
 		}
 	]
 });
