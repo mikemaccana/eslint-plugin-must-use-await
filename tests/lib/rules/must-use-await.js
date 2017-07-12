@@ -20,6 +20,7 @@ ruleTester.run('must-use-await', rule, {
 		} catch(err) {
 			log('Oh no!', err.message)
 		}`,
+		`var getCommands = function(csrFields){}`
 	],
 	invalid: [
 		{
