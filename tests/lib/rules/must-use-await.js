@@ -6,10 +6,20 @@ const IDENTIFIER_ERROR = {
 	type: `Identifier`
 }
 
+const FUNCTION_EXPRESSION_ERROR = {
+	message: `Use 'await' rather than using callbacks and then()`,
+	type: `FunctionExpression`
+}
+
 var ruleTester = new RuleTester();
 ruleTester.run('must-use-await', rule, {
 	valid: [
 		`function foo(){}`,
+		`try {
+			doThing()
+		} catch(err) {
+			log('Oh no!', err.message)
+		}`,
 	],
 	invalid: [
 		{
@@ -30,7 +40,7 @@ ruleTester.run('must-use-await', rule, {
 		},
 		{
 			code: `doThing(function(err){})`,
-			errors: [IDENTIFIER_ERROR]
+			errors: [FUNCTION_EXPRESSION_ERROR]
 		}
 	]
 });
