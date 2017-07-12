@@ -4,6 +4,14 @@ Flags use of callback functions and .then(), for users of ES2017's async/await
 
 [![CircleCI](https://circleci.com/gh/mikemaccana/eslint-must-use-await.svg?style=svg)](https://circleci.com/gh/mikemaccana/eslint-must-use-await)
 
+This plugin catches:
+
+  - Functions that have options including common callback identifiers, like `cb`, `callback` and `done`.
+  - The old pre-ES2017 `.then()` syntax
+  - Invocations of `err`-first functions
+
+All of which you can and should replace with `async/await`.
+
 ## Installation
 
 You'll first need to install [ESLint](http://eslint.org):
